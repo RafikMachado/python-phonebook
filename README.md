@@ -28,8 +28,10 @@ You need Python 3.8+ installed on your machine.
 git clone https://github.com/YOUR_USERNAME/python-phonebook.git
 cd python-phonebook
 
+
 3. Run the Application
 python main.py
+
 
 
 The program will automatically try to load contacts.json.
@@ -56,22 +58,27 @@ Uses JSON (contacts.json) to store contacts.
 
 Execution Examples 🧪
 Scenario 1: Add & List
-Action	Input	Expected Output
-Run Program	python main.py	[INFO] No contacts found. Starting with an empty phonebook.
-Add Contact	Menu 1 → John Doe, 555-1234, john@gmail.com
-	[SUCCESS] Contact 'John Doe' added.
-View All	Menu 4	Shows John Doe
+| Action      | Input                                                                | Expected Output                                               |
+| ----------- | -------------------------------------------------------------------- | ------------------------------------------------------------- |
+| Run Program | `python main.py`                                                     | `[INFO] No contacts found. Starting with an empty phonebook.` |
+| Add Contact | Menu 1 → John Doe, 555-1234, [john@gmail.com](mailto:john@gmail.com) | `[SUCCESS] Contact 'John Doe' added.`                         |
+| View All    | Menu 4                                                               | Shows John Doe                                                |
+
 Scenario 2: Search & Delete
-Action	Input	Expected Output
-Search	Menu 3 → "Doe"	Displays John Doe
-Delete	Menu 2 → 555-1234 → Confirm "Y"	[SUCCESS] Contact removed.
-View All	Menu 4	Phonebook now empty
+| Action   | Input                           | Expected Output              |
+| -------- | ------------------------------- | ---------------------------- |
+| Search   | Menu 3 → "Doe"                  | Displays John Doe            |
+| Delete   | Menu 2 → 555-1234 → Confirm "Y" | `[SUCCESS] Contact removed.` |
+| View All | Menu 4                          | Phonebook now empty          |
+
 Scenario 3: Save & Reload
-Action	Input	Expected Output
-Add Contact	Jane Smith	[SUCCESS]
-Save	Menu 5	[SUCCESS] Contacts saved.
-Exit	Menu 0	Program ends
-Restart	python main.py	[SUCCESS] Loaded 1 contact from contacts.json.
+| Action      | Input            | Expected Output                                  |
+| ----------- | ---------------- | ------------------------------------------------ |
+| Add Contact | Jane Smith       | `[SUCCESS]`                                      |
+| Save        | Menu 5           | `[SUCCESS] Contacts saved.`                      |
+| Exit        | Menu 0           | Program ends                                     |
+| Restart     | `python main.py` | `[SUCCESS] Loaded 1 contact from contacts.json.` |
+
 Repository Contents
 python-phonebook/
 │── phonebook/
@@ -81,6 +88,7 @@ python-phonebook/
 │── contacts.json            # Created at runtime
 │── README.md                # Project documentation
 │── .gitignore               # Ignores JSON files + pycache
+
 
 Notes
 
