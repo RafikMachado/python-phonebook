@@ -96,4 +96,5 @@ JSON was chosen for readability and flexibility.
 
 Duplicate checking is handled strictly by phone number, and optionally by name.
 
+
 Sorting uses Python’s built-in sorted() with lambda keys.
