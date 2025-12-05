@@ -1,85 +1,108 @@
-Python Phonebook Manager: Object-Oriented Console App ☎️
-Project Overview
+Here’s a polished rewrite of your project description, keeping it clear, professional, and engaging:
 
-This is a clean and simple command-line Phonebook Manager written in Python, designed for the Object-Oriented Programming project for Group 5.
+---
 
-The goal of this application is to manage contacts — storing First Name, Last Name, Phone Number, and Email — using Python classes and JSON for data persistence.
+# Python Phonebook Manager: Object-Oriented Console App ☎️
 
-This project demonstrates OOP principles such as:
+## Project Overview
 
-Encapsulation (Contact objects)
+This is a simple and intuitive command-line **Phonebook Manager** built in Python, created as an **Object-Oriented Programming** project for Group 5.
 
-Data storage through a Phonebook class
+The app allows you to manage contacts by storing **First Name, Last Name, Phone Number, and Email**, using Python classes and **JSON** for persistent storage.
 
-Methods for CRUD operations
+### Key Object-Oriented Concepts Demonstrated
 
-Input validation
+* **Encapsulation** via `Contact` objects
+* **Data management** through the `Phonebook` class
+* **CRUD operations** using dedicated methods
+* **Input validation** to ensure data integrity
+* **File persistence** with JSON for automatic saving and loading
 
-File persistence using JSON
+On startup, the program automatically loads any existing contacts from `contacts.json`.
 
-When the program starts, it automatically attempts to load previously saved contacts from contacts.json.
+---
 
-Getting Started: Installation & Setup 🛠️
-1. Install Python
+## Getting Started: Installation & Setup 🛠️
 
-You need Python 3.8+ installed on your machine.
+### 1. Install Python
 
-2. Download/Clone the Repository
+Ensure **Python 3.8+** is installed on your system.
+
+### 2. Download or Clone the Repository
+
+```bash
 git clone https://github.com/YOUR_USERNAME/python-phonebook.git
 cd python-phonebook
+```
 
+### 3. Run the Application
 
-3. Run the Application
+```bash
 python main.py
+```
 
+The program will attempt to automatically load `contacts.json` if it exists.
 
+---
 
-The program will automatically try to load contacts.json.
+## Key Features
 
-Key Features
+This phonebook includes all essential functions:
 
-This phonebook implements all required functions:
+* **Add Contact**
 
-Add Contact
-Validates for duplicate names and duplicate phone numbers.
+  * Prevents duplicate names and phone numbers
 
-Delete Contact
-Remove by phone number (safe and unique) with confirmation.
+* **Delete Contact**
 
-Search Contact
-Search by first name, last name, or partial phone number.
+  * Remove by unique phone number with confirmation
 
-View All Contacts
-Nicely formatted list of all contacts.
-Supports sorting by first name or last name.
+* **Search Contact**
 
-Save & Load Automatically
-Uses JSON (contacts.json) to store contacts.
+  * Search by first name, last name, or partial phone number
 
-Execution Examples 🧪
-Scenario 1: Add & List
+* **View All Contacts**
+
+  * Nicely formatted list with optional sorting by first or last name
+
+* **Automatic Save & Load**
+
+  * Contacts are stored in `contacts.json` using JSON format
+
+---
+
+## Execution Examples 🧪
+
+### Scenario 1: Add & List
+
 | Action      | Input                                                                | Expected Output                                               |
 | ----------- | -------------------------------------------------------------------- | ------------------------------------------------------------- |
 | Run Program | `python main.py`                                                     | `[INFO] No contacts found. Starting with an empty phonebook.` |
 | Add Contact | Menu 1 → John Doe, 555-1234, [john@gmail.com](mailto:john@gmail.com) | `[SUCCESS] Contact 'John Doe' added.`                         |
-| View All    | Menu 4                                                               | Shows John Doe                                                |
+| View All    | Menu 4                                                               | Displays John Doe                                             |
 
-Scenario 2: Search & Delete
+### Scenario 2: Search & Delete
+
 | Action   | Input                           | Expected Output              |
 | -------- | ------------------------------- | ---------------------------- |
 | Search   | Menu 3 → "Doe"                  | Displays John Doe            |
 | Delete   | Menu 2 → 555-1234 → Confirm "Y" | `[SUCCESS] Contact removed.` |
 | View All | Menu 4                          | Phonebook now empty          |
 
-Scenario 3: Save & Reload
+### Scenario 3: Save & Reload
+
 | Action      | Input            | Expected Output                                  |
 | ----------- | ---------------- | ------------------------------------------------ |
-| Add Contact | Jane Smith       | `[SUCCESS]`                                      |
+| Add Contact | Jane Smith       | `[SUCCESS] Contact added.`                       |
 | Save        | Menu 5           | `[SUCCESS] Contacts saved.`                      |
 | Exit        | Menu 0           | Program ends                                     |
 | Restart     | `python main.py` | `[SUCCESS] Loaded 1 contact from contacts.json.` |
 
-Repository Contents
+---
+
+## Repository Structure
+
+```
 python-phonebook/
 │── phonebook/
 │     ├── contact.py        # Contact class
@@ -87,14 +110,18 @@ python-phonebook/
 │── main.py                  # CLI menu
 │── contacts.json            # Created at runtime
 │── README.md                # Project documentation
-│── .gitignore               # Ignores JSON files + pycache
+│── .gitignore               # Ignores JSON files and __pycache__
+```
+
+---
+
+## Notes
+
+* **JSON** was chosen for readability and flexibility.
+* Duplicate checking is **strictly by phone number**, optionally by name.
+* Sorting is handled with Python’s `sorted()` function using `lambda` keys.
+
+---
 
 
-Notes
 
-JSON was chosen for readability and flexibility.
-
-Duplicate checking is handled strictly by phone number, and optionally by name.
-
-
-Sorting uses Python’s built-in sorted() with lambda keys.
